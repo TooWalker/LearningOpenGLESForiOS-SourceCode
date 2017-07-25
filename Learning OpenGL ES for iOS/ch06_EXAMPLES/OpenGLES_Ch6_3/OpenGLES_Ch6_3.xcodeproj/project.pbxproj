@@ -203,6 +203,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
+				TargetAttributes = {
+					03ADBE9D13FDEAFD00905DE9 = {
+						DevelopmentTeam = WGMELUC237;
+					};
+				};
 			};
 			buildConfigurationList = 03ADBE9813FDEAFD00905DE9 /* Build configuration list for PBXProject "OpenGLES_Ch6_3" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -362,9 +367,11 @@
 		03ADBEBE13FDEAFE00905DE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = WGMELUC237;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenGLES_Ch6_3/OpenGLES_Ch6_3-Prefix.pch";
 				INFOPLIST_FILE = "OpenGLES_Ch6_3/OpenGLES_Ch6_3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,9 +380,11 @@
 		03ADBEBF13FDEAFE00905DE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = WGMELUC237;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenGLES_Ch6_3/OpenGLES_Ch6_3-Prefix.pch";
 				INFOPLIST_FILE = "OpenGLES_Ch6_3/OpenGLES_Ch6_3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

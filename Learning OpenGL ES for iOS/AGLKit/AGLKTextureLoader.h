@@ -28,7 +28,8 @@
 
 @interface AGLKTextureLoader : NSObject
 
-+ (AGLKTextureInfo *)textureWithCGImage:(CGImageRef)cgImage                                                         options:(NSDictionary *)options 
-   error:(NSError **)outError; 
++ (AGLKTextureInfo *)textureWithCGImage:(CGImageRef)cgImage
+                                options:(NSDictionary *)options
+                                  error:(NSError **)outError;
    
 @end

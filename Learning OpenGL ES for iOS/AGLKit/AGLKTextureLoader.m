@@ -93,8 +93,9 @@ static NSData *AGLKDataWithResizedCGImageBytes(
 //    The generated texture buffer has power of 2 dimensions. The
 // provided image data is scaled (re-sampled) by Core Graphics as
 // necessary to fit within the generated texture buffer.
-+ (AGLKTextureInfo *)textureWithCGImage:(CGImageRef)cgImage                           options:(NSDictionary *)options
-   error:(NSError **)outError; 
++ (AGLKTextureInfo *)textureWithCGImage:(CGImageRef)cgImage
+                                options:(NSDictionary *)options
+                                  error:(NSError **)outError;
 {
    // Get the bytes to be used when copying data into new texture
    // buffer

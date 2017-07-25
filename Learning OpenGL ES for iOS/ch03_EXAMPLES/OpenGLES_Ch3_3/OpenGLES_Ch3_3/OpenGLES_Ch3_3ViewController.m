@@ -79,15 +79,11 @@ static GLKVector3 movementVectors[3] = {
 // Update the current OpenGL ES context texture wrapping mode
 - (void)updateTextureParameters
 {
-   [self.baseEffect.texture2d0 
-      aglkSetParameter:GL_TEXTURE_WRAP_S
-      value:(self.shouldRepeatTexture ? 
-         GL_REPEAT : GL_CLAMP_TO_EDGE)];
+   [self.baseEffect.texture2d0 aglkSetParameter:GL_TEXTURE_WRAP_S
+                                           value:(self.shouldRepeatTexture ? GL_REPEAT : GL_CLAMP_TO_EDGE)];
    
-   [self.baseEffect.texture2d0 
-      aglkSetParameter:GL_TEXTURE_MAG_FILTER
-      value:(self.shouldUseLinearFilter ?
-         GL_LINEAR : GL_NEAREST)];
+   [self.baseEffect.texture2d0 aglkSetParameter:GL_TEXTURE_MAG_FILTER
+                                          value:(self.shouldUseLinearFilter ? GL_LINEAR : GL_NEAREST)];
 }
 
 

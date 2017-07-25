@@ -88,8 +88,8 @@ static const SceneVertex vertices[] =
    self.textureInfo0 = [GLKTextureLoader 
       textureWithCGImage:imageRef0 
       options:[NSDictionary dictionaryWithObjectsAndKeys:
-         [NSNumber numberWithBool:YES], 
-         GLKTextureLoaderOriginBottomLeft, nil] 
+                                 [NSNumber numberWithBool:YES],
+                                 GLKTextureLoaderOriginBottomLeft, nil] 
       error:NULL];
       
    // Setup texture1
@@ -99,8 +99,8 @@ static const SceneVertex vertices[] =
    self.textureInfo1 = [GLKTextureLoader 
       textureWithCGImage:imageRef1 
       options:[NSDictionary dictionaryWithObjectsAndKeys:
-         [NSNumber numberWithBool:YES], 
-         GLKTextureLoaderOriginBottomLeft, nil] 
+                                 [NSNumber numberWithBool:YES],
+                                 GLKTextureLoaderOriginBottomLeft, nil] 
       error:NULL];
 
    // Enable fragment blending with Frame Buffer contents

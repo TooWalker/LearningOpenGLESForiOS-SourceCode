@@ -7,11 +7,8 @@
 
 @interface AGLKVertexAttribArrayBuffer ()
 
-@property (nonatomic, assign) GLsizeiptr
-   bufferSizeBytes;
-
-@property (nonatomic, assign) GLsizei
-   stride;
+@property (nonatomic, assign) GLsizeiptr bufferSizeBytes;
+@property (nonatomic, assign) GLsizei stride;
 
 @end
 
@@ -28,14 +25,12 @@
 // the current OpenGL ES context for the thread upon which this 
 // method is called.
 - (id)initWithAttribStride:(GLsizei)aStride
-   numberOfVertices:(GLsizei)count
-   bytes:(const GLvoid *)dataPtr
-   usage:(GLenum)usage;
+          numberOfVertices:(GLsizei)count
+                     bytes:(const GLvoid *)dataPtr
+                     usage:(GLenum)usage;
 {
    NSParameterAssert(0 < aStride);
-   NSAssert((0 < count && NULL != dataPtr) ||
-      (0 == count && NULL == dataPtr),
-      @"data must not be NULL or count > 0");
+   NSAssert((0 < count && NULL != dataPtr) || (0 == count && NULL == dataPtr), @"data must not be NULL or count > 0");
       
    if(nil != (self = [super init]))
    {
@@ -62,8 +57,8 @@
 /////////////////////////////////////////////////////////////////
 // This method loads the data stored by the receiver.
 - (void)reinitWithAttribStride:(GLsizei)aStride
-   numberOfVertices:(GLsizei)count
-   bytes:(const GLvoid *)dataPtr;
+              numberOfVertices:(GLsizei)count
+                         bytes:(const GLvoid *)dataPtr;
 {
    NSParameterAssert(0 < aStride);
    NSParameterAssert(0 < count);
@@ -89,9 +84,9 @@
 // When your application prepares an buffer, some OpenGL ES state
 // is altered to allow bind the buffer and configure pointers.
 - (void)prepareToDrawWithAttrib:(GLuint)index
-   numberOfCoordinates:(GLint)count
-   attribOffset:(GLsizeiptr)offset
-   shouldEnable:(BOOL)shouldEnable
+            numberOfCoordinates:(GLint)count
+                   attribOffset:(GLsizeiptr)offset
+                   shouldEnable:(BOOL)shouldEnable
 {
    NSParameterAssert((0 < count) && (count < 4));
    NSParameterAssert(offset < self.stride);
@@ -131,8 +126,8 @@
 // OpenGL ES to use count vertices from the buffer starting from
 // the vertex at index first. Vertex indices start at 0.
 - (void)drawArrayWithMode:(GLenum)mode
-   startVertexIndex:(GLint)first
-   numberOfVertices:(GLsizei)count
+         startVertexIndex:(GLint)first
+         numberOfVertices:(GLsizei)count
 {
    NSAssert(self.bufferSizeBytes >= 
       ((first + count) * self.stride),
@@ -148,8 +143,8 @@
 // buffers starting from the vertex at index first in the 
 // prepared buffers
 + (void)drawPreparedArraysWithMode:(GLenum)mode
-   startVertexIndex:(GLint)first
-   numberOfVertices:(GLsizei)count;
+                  startVertexIndex:(GLint)first
+                  numberOfVertices:(GLsizei)count;
 {
    glDrawArrays(mode, first, count); // Step 6
 }
